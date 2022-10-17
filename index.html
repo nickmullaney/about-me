@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 1b about me</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="app.js"></script> -->
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+  </header>
+  <main>    
+    <h2>What kind of pizza toppings do you like</h2>
+    <p>Here are the available toppings: </p>
+    <ul>
+      <li>Pepperoni</li>
+      <li>Cheese</li>
+      <li>Onion</li>
+      <li>Anchovies</li>
+      <li>Peppers</li>
+      <li>Mushrooms</li>
+    </ul>
+  </main>
+  <script>
+    let answer1 = prompt('Do you want Pepperoni on your Pizza?');
+    console.log(answer1);
+    let answer2 = prompt('Do you want anchovies?');
+    console.log(answer2);
+
+    //String concatenation
+    alert('You answered ' + answer1 + ' to the pepperoni question');
+    
+    if(answer2 === 'yes' || 'YES' || 'Yes'){
+      alert('Why do you like anchovies?!?');
+    }
+  </script>
+</body>
+</html>
