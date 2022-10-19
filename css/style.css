@@ -57,6 +57,14 @@ main{
   border-color: orangered;
   background-color: coral;
 }
+#bio{
+  padding: 10px;
+  background-color: moccasin;
+}
+#education{
+  padding: 10px;
+  background-color: aquamarine;
+}
 
 #questions{
   background-color: burlywood;
