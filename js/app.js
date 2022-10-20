@@ -46,13 +46,12 @@
 
 // alert(order);
 
-let userName = yourName();
-let spice = spiceYouLike();
-alert('I also like ' + spice + ' ' + userName + '!');
-let visit = userVisits();
-alert(visit + ' sounds like a great place to visit ' + userName + '.');
-let newSpiceBlend = newSpice();
-alert('Thanks for the suggestion ' + userName + '. We love thinking of new combinations and a ' + newSpiceBlend + ' blend, with hints of ' + spice + ' and ingredients from ' + visit + ' would be great!');
+
+// New questions for this trial
+
+//let userName = yourName();
+//let spice = spiceYouLike();
+
 
 function yourName(){
   let valid = false;
@@ -78,17 +77,18 @@ function goodbye(userName){
 
 function spiceYouLike(){
   let spice = prompt('Which of the 4 flavor profiles do you like most? Sweet, Savory, Spicy, Fragrant');
+  spice = spice.toLowerCase();
   console.log('spice',spice);
-  if (spice === 'sweet' || spice === 'Sweet'){
+  if (spice === 'sweet' || spice === 'swt'){
     alert ('If you like ' + spice + ', you will love our Valhalla Blend');
   }
-  else if(spice === 'savory' || spice === 'Savory' ){
+  else if(spice === 'savory' || spice === 'sav'){
     alert ('If you like ' + spice + ', you will love our Pangea Blend');
   }
-  else if(spice === 'spicy' || spice === 'Spicy'){
+  else if(spice === 'spicy' || spice === 'spy'){
     alert ('If you like ' + spice + ', you will love our El Dorado Blend');
   }
-  else if(spice === 'fragrant' || spice === 'Fragrant'){
+  else if(spice === 'fragrant' || spice === 'Frgt'){
     alert ('If you like Nick' + spice + ', you will love our Atlantis Blend');
   }
   else{
@@ -109,5 +109,17 @@ function newSpice(){
   return newSpice;
 }
 
+function spiceAlert(){
+  alert('I also like ' + spice + ' ' + userName + '!');
+}
+// let visit = userVisits();
 
+function placeAlert(){
+  alert(visit + ' sounds like a great place to visit ' + userName + '.');
+}
 
+// let newSpiceBlend = newSpice();
+
+function fullAlert(){ 
+alert('Thanks for the suggestion ' + userName + '. We love thinking of new combinations and a ' + newSpiceBlend + ' blend, with hints of ' + spice + ' and ingredients from ' + visit + ' would be great!');
+}
