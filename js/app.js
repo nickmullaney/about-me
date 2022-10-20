@@ -1,3 +1,4 @@
+'use strict';
 let userName = prompt('What is your name?');
 console.log('user name',userName);
 alert('Welcome to my website ' + userName + ', It\'s so nice to have you here. I\'d love to ask you a few questions. Please answer Yes or No to the following questions.');
@@ -5,7 +6,7 @@ alert('Welcome to my website ' + userName + ', It\'s so nice to have you here. I
 
 let count = 0;
 let answer1 = prompt('Do you think I\'ve lived in more than 6 states? Yes or No or y/n.');
-console.log('Q1 Answer: ',answer1);
+console.log('Q1 Answer: ', answer1);
 answer1 = answer1.toLowerCase();
 if(answer1 === 'yes' || answer1 === 'y'){
   alert ('Thats correct! I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
@@ -19,7 +20,7 @@ else {
 }
 
 let answer2 = prompt('Do you think I\'ve ever skydived before? Yes or No or y/n.');
-console.log('Q2 Answer: ',answer2);
+console.log('Q2 Answer: ', answer2);
 answer2 = answer2.toLowerCase();
 if(answer2 === 'yes' || answer2 === 'y'){
   alert ('Absolutely not that\'s terrifying.');
@@ -86,3 +87,13 @@ else if (count === 1 || count === 2){
 else{
   alert('Well a ' +count+ '/5, I\'m not even mad, I\'m impressed');
 }
+
+
+const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/7008');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    audio.play();
+  });
+});
