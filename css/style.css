@@ -47,9 +47,8 @@ li a:hover {
   background-color: #111;
   transition: all .4s ease 0s;
 }
-.logo{
-  float: left;
-  size: 30px;
+.image{
+  background-color: inherit;
 }
 
 main{

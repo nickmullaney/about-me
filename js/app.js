@@ -76,16 +76,16 @@ else {
 }
 
 if(count >= 4){
-  alert('Great job on the Quiz! You got ' +count+ '/5!');
+  alert('Great job on the Quiz ' + userName + '! You got ' +count+ '/5!');
 }
 else if (count === 3){
-  alert('Nice job on the Quiz, you got ' +count+ '/5!');
+  alert('Nice job on the Quiz ' + userName + ', you got ' +count+ '/5!');
 }
 else if (count === 1 || count === 2){
-  alert('You didn\'t do so well on the Quiz, you got ' +count+ '/5.');
+  alert('You didn\'t do so well on the Quiz ' + userName + ', you got ' +count+ '/5.');
 }
 else{
-  alert('Well a ' +count+ '/5, I\'m not even mad, I\'m impressed');
+  alert('Well a ' +count+ '/5, I\'m not even mad ' + userName + '!, I\'m impressed');
 }
 
 
