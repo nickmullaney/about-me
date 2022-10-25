@@ -14,8 +14,6 @@ askAgain(userName);
 console.log('user name', userName);
 alert('Welcome to my website ' + userName + ', It\'s so nice to have you here. I\'d love to ask you a few questions. Please answer Yes or No to the following questions.');
 
-
-
 let answer1 = prompt('Do you think I\'ve lived in more than 6 states? Yes or No or y/n.');
 answer1 = askAgain(answer1);
 
@@ -97,6 +95,7 @@ else {
 
 let answer6 = 4;
 let guessCount = 0;
+console.log(`Q6 answer ${answer6}`);
 let guess6 = prompt('I know you are getting tired of this, but I need you to guess a number between 1 and 10. You get 4 guesses to get it right.');
 checkGuess(guess6);
 
@@ -120,88 +119,50 @@ function checkGuess(guess) {
     }
   }
 }
-
-// old code figuring it out
-
-// let valid = false;
-
-// while (!valid) {
-//   if (guess6 < answer6) {
-//     guessCount = guessCount + 1;
-//     prompt('You guessed a little low. Try again');
-//   }
-//   else if (guess6 > answer6) {
-//     guessCount = guessCount + 1;
-//     prompt('You guessed a little high. Try again');
-//   }
-//   else if (answer6 === guess6) {
-//     guessCount = guessCount + 1;
-//     alert(answer6 + ' was correct. Congrats you guessed it correctly in' + guessCount + ' guesses!');
-//     count = count + 1;
-//     valid = true;
-//   }
-//   else {
-//     alert('Error');
-//   }
-// }
-
-
-
-// for (let i = 0; i < 4; i++) {
-//   let guess6 = prompt('I know you are getting tired of this, but I need you to guess a number between 1 and 10. You get 4 guesses to get it right.');
-//   if (guess6 < answer6) {
-//     alert('You guessed a little low. Try again');
-//   }
-//   else if (guess6 > answer6) {
-//     alert('You guessed a little high. Try again');
-//   }
-//   else if (answer6 === guess6) {
-//     alert(answer6 + ' was correct. Congrats you guessed it correctly!');
-//     count = count + 1;
-//     break;
-//   }
-//   else {
-//     alert('Error');
-//   }
-// }
+//END HERE**************************
 
 //Searches through array to find correct answer and returns valid answer
 let favoriteBakedGoods = ['chocolate chip cookies', 'doughnuts', 'creme brulee', 'tiramisu', 'almond croissant'];
-let answer7 = prompt('Final question. Can you guess what some of my favorite baked goods are?');
-answer7 = answer7.toLowerCase();
-let q7guess = 0;
 let answer7valid = false;
+let q7guess = 7;
 
-for (let i = 0; i < favoriteBakedGoods.length; i++) {
-  if (answer7 === favoriteBakedGoods[i]) {
-    count = count + 1;
-    answer7valid = true;
+while (!answer7valid && q7guess > 0) {
+  let answer7 = prompt('Can you guess what some of my favorite baked goods are?').toLowerCase();
+  console.log(`Q6 answer ${answer7}`);
+  //This is for checking if the answer is inside the array
+  //This part of the for loop checks through the array while the while loop above has a limit of 7
+  for (let i = 0; i < favoriteBakedGoods.length; i++) {
+    if (answer7 === favoriteBakedGoods[i]) {
+      answer7valid = true;
+    }
   }
-  else if (q7guess < 6) {
-    q7guess = q7guess + 1;
+  q7guess--;
+  if (!answer7valid) {
     alert('That\'s not one of them, but good guess. You have ' + q7guess + ' guesses left');
+    if (q7guess === 0) {
+      alert(`Ya done f&cked up, I like ${favoriteBakedGoods}`);
+    }
+  }
+  else if (answer7valid) {
+    count++;
+    alert(`You guessed it correctly! It only took you ${q7guess} guesses. My whole list of favorite baked goods are ${favoriteBakedGoods}`);
   }
 }
-if (answer7valid) {
-  alert('You guessed it correctly! It only took you ' + q7guess + ' guesses');
-}
-else {
-  alert('Sorry that\'s incorrect.');
-}
+
 
 let questionTotal = 7;
 //Count tally
 if (count >= 4) {
-  alert('Great job on the Quiz ' + userName + '! You got ' + count + '/'+ questionTotal+'!');
+  alert('Great job on the Quiz ' + userName + '! You got ' + count + '/' + questionTotal + '!');
 }
 else if (count === 3) {
-  alert('Nice job on the Quiz ' + userName + ', you got ' + count + '/'+ questionTotal+'!');
+  alert('Nice job on the Quiz ' + userName + ', you got ' + count + '/' + questionTotal + '!');
 }
 else if (count === 1 || count === 2) {
-  alert('You didn\'t do so well on the Quiz ' + userName + ', you got ' + count + '/'+ questionTotal+'.');
+  alert('You didn\'t do so well on the Quiz ' + userName + ', you got ' + count + '/' + questionTotal + '.');
 }
 else {
-  alert('Well a ' + count + '/'+ questionTotal+', I\'m not even mad ' + userName + '!, I\'m impressed');
+  alert('Well a ' + count + '/' + questionTotal + ', I\'m not even mad ' + userName + '!, I\'m impressed');
 }
 
 
