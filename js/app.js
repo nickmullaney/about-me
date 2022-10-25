@@ -140,7 +140,7 @@ while (!answer7valid && q7guess > 0) {
   if (!answer7valid) {
     alert('That\'s not one of them, but good guess. You have ' + q7guess + ' guesses left');
     if (q7guess === 0) {
-      alert(`Ya done f&cked up, I like ${favoriteBakedGoods}`);
+      alert(`Sorry you didn't guess it correctly, I like these baked goods: ${favoriteBakedGoods}`);
     }
   }
   else if (answer7valid) {
