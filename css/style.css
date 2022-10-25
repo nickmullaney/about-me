@@ -1,7 +1,15 @@
 body{
-  background-color: rgba(233, 167, 92, 0.781);
+  background: linear-gradient(180deg, rgba(187, 109, 20, 0.781), rgba(233, 167, 92, 0.781)) ;
 }
 
+main{
+  border-style:outset;
+  border-width: 7px;
+  border-color: rgba(219, 139, 47, 0.781);
+  background: linear-gradient(90deg, rgb(233, 122, 49),rgb(160, 40, 19));
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 header{
   padding: 10px;
   background-size: cover;
@@ -17,7 +25,7 @@ h1{
   border-width: 7px;
   border-color: rgba(219, 139, 47, 0.781);
   padding: 10px;
-  background-color: rgb(233, 122, 49);
+  
 }
 
 header::after{
@@ -92,7 +100,7 @@ main{
   border-style:outset;
   border-width: 7px;
   border-color: rgba(219, 139, 47, 0.781);
-  background-color: rgb(233, 122, 49);
+
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -100,7 +108,6 @@ main{
   border-style:outset;
   border-width: 7px;
   border-color: rgba(219, 139, 47, 0.781);
-  background-color: rgb(233, 122, 49);
   margin-top: 5px;
   margin-bottom: 5px;  
 }
@@ -109,7 +116,6 @@ main{
   border-style:outset;
   border-width: 7px;
   border-color: rgba(219, 139, 47, 0.781);
-  background-color: rgb(233, 122, 49);
   margin-top: 5px;
   margin-bottom: 5px;  
 }
@@ -118,7 +124,6 @@ main{
   border-style:outset;
   border-width: 7px;
   border-color: rgba(219, 139, 47, 0.781);
-  background-color: rgb(233, 122, 49);
   margin-top: 5px;
   margin-bottom: 5px;  
 }
@@ -127,11 +132,17 @@ main{
   border-style:outset;
   border-width: 7px;
   border-color: rgba(219, 139, 47, 0.781);
-  background-color: rgb(233, 122, 49);
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
+#top10{
+  border-style:outset;
+  border-width: 7px;
+  border-color: rgba(219, 139, 47, 0.781);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 #questions{
   font-size: medium;
