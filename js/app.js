@@ -43,7 +43,7 @@ bakedGoods();
 
 tally(count);
 
-function question1(answer1){
+function question1(answer1) {
   if (answer1 === 'yes' || answer1 === 'y') {
     alert('Thats correct! I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
     count = count + 1;
@@ -56,7 +56,7 @@ function question1(answer1){
   }
 }
 
-function question2(answer2){
+function question2(answer2) {
   if (answer2 === 'yes' || answer2 === 'y') {
     alert('Absolutely not that\'s terrifying.');
   }
@@ -69,7 +69,7 @@ function question2(answer2){
   }
 }
 
-function question3(answer3){
+function question3(answer3) {
   if (answer3 === 'yes' || answer3 === 'y') {
     alert('I am currently working on it, but I\'m not published yet, I\'ll let you know when my fantasy novel is complete and up.');
   }
@@ -82,7 +82,7 @@ function question3(answer3){
   }
 }
 
-function question4(answer4){
+function question4(answer4) {
   if (answer4 === 'yes' || answer4 === 'y') {
     alert('I actually have, I took a few classes at South Seattle College during the pandemic. Great guess!');
     count = count + 1;
@@ -95,7 +95,7 @@ function question4(answer4){
   }
 }
 
-function question5(answer5){
+function question5(answer5) {
   if (answer5 === 'yes' || answer5 === 'y') {
     alert('I have almost always lived by the water but I actually got married at the base of Mt Tahoma(Mt Rainier) in the woods.');
   }
@@ -143,50 +143,50 @@ function askAgain(entry) {
 //END HERE**************************
 
 //Searches through array to find correct answer and returns valid answer
-function bakedGoods(){
-let favoriteBakedGoods = ['chocolate chip cookies', 'doughnuts', 'creme brulee', 'tiramisu', 'almond croissant'];
-let answer7valid = false;
-let q7guess = 7;
+function bakedGoods() {
+  let favoriteBakedGoods = ['chocolate chip cookies', 'doughnuts', 'creme brulee', 'tiramisu', 'almond croissant'];
+  let answer7valid = false;
+  let q7guess = 7;
 
-while (!answer7valid && q7guess > 0) {
-  let answer7 = prompt('Can you guess what some of my favorite baked goods are?').toLowerCase();
-  console.log(`Q6 answer ${answer7}`);
-  //This is for checking if the answer is inside the array
-  //This part of the for loop checks through the array while the while loop above has a limit of 7
-  for (let i = 0; i < favoriteBakedGoods.length; i++) {
-    if (answer7 === favoriteBakedGoods[i]) {
-      answer7valid = true;
+  while (!answer7valid && q7guess > 0) {
+    let answer7 = prompt('Can you guess what some of my favorite baked goods are?').toLowerCase();
+    console.log(`Q6 answer ${answer7}`);
+    //This is for checking if the answer is inside the array
+    //This part of the for loop checks through the array while the while loop above has a limit of 7
+    for (let i = 0; i < favoriteBakedGoods.length; i++) {
+      if (answer7 === favoriteBakedGoods[i]) {
+        answer7valid = true;
+      }
+    }
+    q7guess--;
+    if (!answer7valid) {
+      alert('That\'s not one of them, but good guess. You have ' + q7guess + ' guesses left');
+      if (q7guess === 0) {
+        alert(`Sorry you didn't guess it correctly, I like these baked goods: ${favoriteBakedGoods}`);
+      }
+    }
+    else if (answer7valid) {
+      count++;
+      alert(`You guessed it correctly! It only took you ${q7guess} guesses. My whole list of favorite baked goods are ${favoriteBakedGoods}`);
     }
   }
-  q7guess--;
-  if (!answer7valid) {
-    alert('That\'s not one of them, but good guess. You have ' + q7guess + ' guesses left');
-    if (q7guess === 0) {
-      alert(`Sorry you didn't guess it correctly, I like these baked goods: ${favoriteBakedGoods}`);
-    }
-  }
-  else if (answer7valid) {
-    count++;
-    alert(`You guessed it correctly! It only took you ${q7guess} guesses. My whole list of favorite baked goods are ${favoriteBakedGoods}`);
-  }
-}
 }
 
-function tally(count){
-let questionTotal = 7;
-//Count tally
-if (count >= 4) {
-  alert('Great job on the Quiz ' + userName + '! You got ' + count + '/' + questionTotal + '!');
-}
-else if (count === 3) {
-  alert('Nice job on the Quiz ' + userName + ', you got ' + count + '/' + questionTotal + '!');
-}
-else if (count === 1 || count === 2) {
-  alert('You didn\'t do so well on the Quiz ' + userName + ', you got ' + count + '/' + questionTotal + '.');
-}
-else {
-  alert('Well a ' + count + '/' + questionTotal + ', I\'m not even mad ' + userName + '!, I\'m impressed');
-}
+function tally(count) {
+  let questionTotal = 7;
+  //Count tally
+  if (count >= 4) {
+    alert('Great job on the Quiz ' + userName + '! You got ' + count + '/' + questionTotal + '!');
+  }
+  else if (count === 3) {
+    alert('Nice job on the Quiz ' + userName + ', you got ' + count + '/' + questionTotal + '!');
+  }
+  else if (count === 1 || count === 2) {
+    alert('You didn\'t do so well on the Quiz ' + userName + ', you got ' + count + '/' + questionTotal + '.');
+  }
+  else {
+    alert('Well a ' + count + '/' + questionTotal + ', I\'m not even mad ' + userName + '!, I\'m impressed');
+  }
 }
 
 // Stack Overflow helped with building this

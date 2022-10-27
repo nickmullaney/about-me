@@ -7,7 +7,7 @@ main{
   border-style:outset;
   border-width: 7px;
   border-color: rgba(219, 139, 47, 0.781);
-  background: linear-gradient(90deg, rgb(233, 122, 49),rgb(160, 40, 19));
+  background: linear-gradient(0deg, rgb(233, 122, 49),rgb(110, 19, 80));
   margin-top: 5px;
   margin-bottom: 5px;
 }
