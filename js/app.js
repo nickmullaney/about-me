@@ -14,36 +14,43 @@ askAgain(userName);
 console.log('user name', userName);
 alert('Welcome to my website ' + userName + ', It\'s so nice to have you here. I\'d love to ask you a few questions. Please answer Yes or No to the following questions.');
 
-let answer1 = prompt('Do you think I\'ve lived in more than 6 states? Yes or No or y/n.');
+let answer1 = prompt('Do you think I\'ve lived in more than 6 states? Yes or No or y/n.').toLowerCase();
 answer1 = askAgain(answer1);
-
 console.log('Q1 Answer: ', answer1);
-answer1 = answer1.toLowerCase();
-if (answer1 === 'yes' || answer1 === 'y') {
-  alert('Thats correct! I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
-  count = count + 1;
+question1(answer1);
+
+function question1(){
+  if (answer1 === 'yes' || answer1 === 'y') {
+    alert('Thats correct! I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
+    count = count + 1;
+  }
+  else if (answer1 === 'no' || answer1 === 'n') {
+    alert('I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
+  }
+  else {
+    alert('Thats not a valid answer.');
+  }
 }
-else if (answer1 === 'no' || answer1 === 'n') {
-  alert('I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
+
+function question2(){
+  if (answer2 === 'yes' || answer2 === 'y') {
+    alert('Absolutely not that\'s terrifying.');
+  }
+  else if (answer2 === 'no' || answer2 === 'n') {
+    alert('I see you also like two feet on the ground. Good choice');
+    count = count + 1;
+  }
+  else {
+    alert('Thats not a valid answer.');
+  }
 }
-else {
-  alert('Thats not a valid answer.');
-}
+
 
 let answer2 = prompt('Do you think I\'ve ever skydived before? Yes or No or y/n.');
 answer2 = askAgain(answer2);
 console.log('Q2 Answer: ', answer2);
 answer2 = answer2.toLowerCase();
-if (answer2 === 'yes' || answer2 === 'y') {
-  alert('Absolutely not that\'s terrifying.');
-}
-else if (answer2 === 'no' || answer2 === 'n') {
-  alert('I see you also like two feet on the ground. Good choice');
-  count = count + 1;
-}
-else {
-  alert('Thats not a valid answer.');
-}
+
 
 let answer3 = prompt('Do you think I\'ve ever been published? Yes or No or y/n.');
 answer3 = askAgain(answer3);
