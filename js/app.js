@@ -2,12 +2,6 @@
 
 let count = 0;
 
-function askAgain(entry) {
-  while (!entry) {
-    entry = prompt('Let\'s try that again? Shall we?');
-  }
-  return entry;
-}
 
 let userName = prompt('What is your name?');
 askAgain(userName);
@@ -19,7 +13,37 @@ answer1 = askAgain(answer1);
 console.log('Q1 Answer: ', answer1);
 question1(answer1);
 
-function question1(){
+let answer2 = prompt('Do you think I\'ve ever skydived before? Yes or No or y/n.').toLowerCase();
+answer2 = askAgain(answer2);
+console.log('Q2 Answer: ', answer2);
+question2(answer2);
+
+let answer3 = prompt('Do you think I\'ve ever been published? Yes or No or y/n.').toLowerCase();
+answer3 = askAgain(answer3);
+console.log('Q3 Answer: ', answer3);
+question3(answer3);
+
+let answer4 = prompt('Have I ever taken coding classes before? Yes or No or y/n.').toLowerCase();
+answer4 = askAgain(answer4);
+console.log('Q4 Answer: ', answer4);
+question4(answer4);
+
+let answer5 = prompt('Do you think I got married by the water? Yes or No or y/n.').toLowerCase();
+answer5 = askAgain(answer5);
+console.log('Q5 Answer: ', answer5);
+question5(answer5);
+
+let answer6 = 4;
+let guessCount = 0;
+console.log(`Q6 answer ${answer6}`);
+let guess6 = prompt('I know you are getting tired of this, but I need you to guess a number between 1 and 10. You get 4 guesses to get it right.');
+checkGuess(guess6);
+
+bakedGoods();
+
+tally(count);
+
+function question1(answer1){
   if (answer1 === 'yes' || answer1 === 'y') {
     alert('Thats correct! I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
     count = count + 1;
@@ -32,7 +56,7 @@ function question1(){
   }
 }
 
-function question2(){
+function question2(answer2){
   if (answer2 === 'yes' || answer2 === 'y') {
     alert('Absolutely not that\'s terrifying.');
   }
@@ -45,66 +69,44 @@ function question2(){
   }
 }
 
-
-let answer2 = prompt('Do you think I\'ve ever skydived before? Yes or No or y/n.');
-answer2 = askAgain(answer2);
-console.log('Q2 Answer: ', answer2);
-answer2 = answer2.toLowerCase();
-
-
-let answer3 = prompt('Do you think I\'ve ever been published? Yes or No or y/n.');
-answer3 = askAgain(answer3);
-console.log('Q3 Answer: ', answer3);
-answer3 = answer3.toLowerCase();
-if (answer3 === 'yes' || answer3 === 'y') {
-  alert('I am currently working on it, but I\'m not published yet, I\'ll let you know when my fantasy novel is complete and up.');
-}
-else if (answer3 === 'no' || answer3 === 'n') {
-  alert('Good Guess! I am currently working on it, but I\'m not published yet, I\'ll let you know when my fantasy novel is complete and up.');
-  count = count + 1;
-}
-else {
-  alert('Thats not a valid answer.');
+function question3(answer3){
+  if (answer3 === 'yes' || answer3 === 'y') {
+    alert('I am currently working on it, but I\'m not published yet, I\'ll let you know when my fantasy novel is complete and up.');
+  }
+  else if (answer3 === 'no' || answer3 === 'n') {
+    alert('Good Guess! I am currently working on it, but I\'m not published yet, I\'ll let you know when my fantasy novel is complete and up.');
+    count = count + 1;
+  }
+  else {
+    alert('Thats not a valid answer.');
+  }
 }
 
-let answer4 = prompt('Have I ever taken coding classes before? Yes or No or y/n.');
-answer4 = askAgain(answer4);
-console.log('Q4 Answer: ', answer4);
-answer4 = answer4.toLowerCase();
-if (answer4 === 'yes' || answer4 === 'y') {
-  alert('I actually have, I took a few classes at South Seattle College during the pandemic. Great guess!');
-  count = count + 1;
-}
-else if (answer4 === 'no' || answer4 === 'n') {
-  alert('Good guess, but I actually have, I took a few classes at South Seattle College during the pandemic.');
-}
-else {
-  alert('Thats not a valid answer.');
+function question4(answer4){
+  if (answer4 === 'yes' || answer4 === 'y') {
+    alert('I actually have, I took a few classes at South Seattle College during the pandemic. Great guess!');
+    count = count + 1;
+  }
+  else if (answer4 === 'no' || answer4 === 'n') {
+    alert('Good guess, but I actually have, I took a few classes at South Seattle College during the pandemic.');
+  }
+  else {
+    alert('Thats not a valid answer.');
+  }
 }
 
-let answer5 = prompt('Do you think I got married by the water? Yes or No or y/n.');
-answer5 = askAgain(answer5);
-console.log('Q5 Answer: ', answer5);
-answer5 = answer5.toLowerCase();
-if (answer5 === 'yes' || answer5 === 'y') {
-  alert('I have almost always lived by the water but I actually got married at the base of Mt Tahoma(Mt Rainier) in the woods.');
+function question5(answer5){
+  if (answer5 === 'yes' || answer5 === 'y') {
+    alert('I have almost always lived by the water but I actually got married at the base of Mt Tahoma(Mt Rainier) in the woods.');
+  }
+  else if (answer5 === 'no' || answer5 === 'n') {
+    alert('Great guess, I got married at the base of Mt Tahoma(Mt Rainier) in the woods.');
+    count = count + 1;
+  }
+  else {
+    alert('Thats not a valid answer.');
+  }
 }
-else if (answer5 === 'no' || answer5 === 'n') {
-  alert('Great guess, I got married at the base of Mt Tahoma(Mt Rainier) in the woods.');
-  count = count + 1;
-}
-else {
-  alert('Thats not a valid answer.');
-}
-
-// Look at this and think about a while loop or why this one isn't scanning through. 
-//
-
-let answer6 = 4;
-let guessCount = 0;
-console.log(`Q6 answer ${answer6}`);
-let guess6 = prompt('I know you are getting tired of this, but I need you to guess a number between 1 and 10. You get 4 guesses to get it right.');
-checkGuess(guess6);
 
 function checkGuess(guess) {
   while (guessCount < 4) {
@@ -126,9 +128,22 @@ function checkGuess(guess) {
     }
   }
 }
+
+function askAgain(entry) {
+  while (!entry) {
+    entry = prompt('Let\'s try that again? Shall we?');
+  }
+  return entry;
+}
+
+// Look at this and think about a while loop or why this one isn't scanning through.
+//
+
+
 //END HERE**************************
 
 //Searches through array to find correct answer and returns valid answer
+function bakedGoods(){
 let favoriteBakedGoods = ['chocolate chip cookies', 'doughnuts', 'creme brulee', 'tiramisu', 'almond croissant'];
 let answer7valid = false;
 let q7guess = 7;
@@ -155,8 +170,9 @@ while (!answer7valid && q7guess > 0) {
     alert(`You guessed it correctly! It only took you ${q7guess} guesses. My whole list of favorite baked goods are ${favoriteBakedGoods}`);
   }
 }
+}
 
-
+function tally(count){
 let questionTotal = 7;
 //Count tally
 if (count >= 4) {
@@ -171,7 +187,7 @@ else if (count === 1 || count === 2) {
 else {
   alert('Well a ' + count + '/' + questionTotal + ', I\'m not even mad ' + userName + '!, I\'m impressed');
 }
-
+}
 
 // Stack Overflow helped with building this
 const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/7008');
