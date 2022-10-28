@@ -33,11 +33,11 @@ answer5 = askAgain(answer5);
 console.log('Q5 Answer: ', answer5);
 question5(answer5);
 
-let answer6 = 4;
+let answer6 = Math.floor(Math.random() * 10) + 1;
 let guessCount = 0;
 console.log(`Q6 answer ${answer6}`);
 let guess6 = prompt('I know you are getting tired of this, but I need you to guess a number between 1 and 10. You get 4 guesses to get it right.');
-checkGuess(guess6);
+checkGuess(guess6, answer6);
 
 bakedGoods();
 
@@ -108,23 +108,23 @@ function question5(answer5) {
   }
 }
 
-function checkGuess(guess) {
+function checkGuess(guess, answer6) {
   while (guessCount < 4) {
     if (guess < answer6) {
       guessCount++;
       guess6 = prompt('Sorry That is a little low, Try again. You have ' + (4 - guessCount) + ' guesses left');
-      checkGuess(guess6);
+      checkGuess(guess6, answer6);
     }
     else if (guess > answer6) {
       guessCount++;
       guess6 = prompt('Sorry That is a little high, Try again. You have ' + (4 - guessCount) + ' guesses left');
-      checkGuess(guess6);
+      checkGuess(guess6, answer6);
     }
     else {
       guessCount++;
       alert('Congrats you guessed the correct number, it was ' + answer6 + ' and it only took you ' + guessCount + ' guesses.');
       guessCount = 4;
-      count = count + 1;
+      count++;
     }
   }
 }
