@@ -144,7 +144,7 @@ function askAgain(entry) {
 
 //Searches through array to find correct answer and returns valid answer
 function bakedGoods() {
-  let favoriteBakedGoods = ['chocolate chip cookies', 'doughnuts', 'creme brulee', 'tiramisu', 'almond croissant'];
+  let favoriteBakedGoods = ['joy cookies', 'doughnuts', 'creme brulee', 'tiramisu', 'almond croissant'];
   let answer7valid = false;
   let q7guess = 7;
 
@@ -159,6 +159,7 @@ function bakedGoods() {
       }
     }
     q7guess--;
+    //Attempting to capitalize the words in the array
     capitalizeWords(favoriteBakedGoods);
     if (!answer7valid) {
       alert('That\'s not one of them, but good guess. You have ' + q7guess + ' guesses left');
@@ -176,6 +177,7 @@ function bakedGoods() {
 }
 
 //takes an array and converts the first letter of each word to a capitol letter
+//WIP*********************
 function capitalizeWords(array) {
   return array.map(Element => {
     return Element.charAt(0).toUpperCase() + Element.slice(1).toLowerCase();
