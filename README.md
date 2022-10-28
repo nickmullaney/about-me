@@ -10,4 +10,4 @@ About me now contains the following features
 * Education
 * Fun Duck Gif
 * included loop functions for processing user answers
-* 
+* Danner was the Driver for the file app.js while I was the Navigator
