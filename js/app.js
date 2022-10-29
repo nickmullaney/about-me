@@ -1,13 +1,13 @@
 'use strict';
 
 let count = 0;
-// let userName = whoAreYou();
-// states();
-// skydive();
-// published();
-// codingClass();
-// married();
-// numberGame();
+let userName = whoAreYou();
+states();
+skydive();
+published();
+codingClass();
+married();
+numberGame();
 bakedGoods();
 tally(count, userName);
 
@@ -18,7 +18,6 @@ function whoAreYou() {
   alert('Welcome to my website ' + userName + ', It\'s so nice to have you here. I\'d love to ask you a few questions. Please answer Yes or No to the following questions.');
   return userName;
 }
-
 
 function states() {
   let answer1 = prompt('Do you think I\'ve lived in more than 6 states? Yes or No or y/n.').toLowerCase();
