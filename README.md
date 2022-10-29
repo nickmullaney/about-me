@@ -8,6 +8,10 @@ About me now contains the following features
 * Biography
 * Work experience
 * Education
-* Fun Duck Gif
+* Fun Duck Gif with clickable sound
 * included loop functions for processing user answers
+* includes array checker
+
+Paired Programming Notes
+
 * Danner was the Driver for the file app.js while I was the Navigator
