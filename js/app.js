@@ -33,6 +33,7 @@ function skydive() {
 
   if (answer2 === 'yes' || answer2 === 'y') {
     alert('Absolutely not that\'s terrifying.');
+    count++;
   }
   else if (answer2 === 'no' || answer2 === 'n') {
     alert('I see you also like two feet on the ground. Good choice');
