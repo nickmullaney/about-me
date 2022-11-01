@@ -2,19 +2,11 @@
 
 let count = 0;
 let userName = whoAreYou();
-states();
-skydive();
-published();
-codingClass();
-married();
-numberGame();
-bakedGoods();
-tally(count, userName);
+
 
 function whoAreYou() {
   let userName = prompt('What is your name?');
   userName = askAgain(userName);
-  console.log('user name', userName);
   alert('Welcome to my website ' + userName + ', It\'s so nice to have you here. I\'d love to ask you a few questions. Please answer Yes or No to the following questions.');
   return userName;
 }
@@ -22,7 +14,6 @@ function whoAreYou() {
 function states() {
   let answer1 = prompt('Do you think I\'ve lived in more than 6 states? Yes or No or y/n.').toLowerCase();
   answer1 = askAgain(answer1);
-  console.log('Q1 Answer: ', answer1);
   if (answer1 === 'yes' || answer1 === 'y') {
     alert('Thats correct! I\'ve lived in 7 States. Florida, Illinois, Maryland, New York, Rhode Island, Boston & Washinton.');
     count++;
@@ -39,14 +30,12 @@ function states() {
 function skydive() {
   let answer2 = prompt('Do you think I\'ve ever skydived before? Yes or No or y/n.').toLowerCase();
   answer2 = askAgain(answer2);
-  console.log('Q2 Answer: ', answer2);
 
   if (answer2 === 'yes' || answer2 === 'y') {
     alert('Absolutely not that\'s terrifying.');
   }
   else if (answer2 === 'no' || answer2 === 'n') {
     alert('I see you also like two feet on the ground. Good choice');
-    console.log(count);
   }
   else {
     alert('Thats not a valid answer.');
@@ -57,7 +46,6 @@ function skydive() {
 function published() {
   let answer3 = prompt('Do you think I\'ve ever been published? Yes or No or y/n.').toLowerCase();
   answer3 = askAgain(answer3);
-  console.log('Q3 Answer: ', answer3);
   if (answer3 === 'yes' || answer3 === 'y') {
     alert('I am currently working on it, but I\'m not published yet, I\'ll let you know when my fantasy novel is complete and up.');
   }
@@ -74,7 +62,6 @@ function published() {
 function codingClass() {
   let answer4 = prompt('Have I ever taken coding classes before? Yes or No or y/n.').toLowerCase();
   answer4 = askAgain(answer4);
-  console.log('Q4 Answer: ', answer4);
 
   if (answer4 === 'yes' || answer4 === 'y') {
     alert('I actually have, I took a few classes at South Seattle College during the pandemic. Great guess!');
@@ -92,7 +79,6 @@ function codingClass() {
 function married() {
   let answer5 = prompt('Do you think I got married by the water? Yes or No or y/n.').toLowerCase();
   answer5 = askAgain(answer5);
-  console.log('Q5 Answer: ', answer5);
 
   if (answer5 === 'yes' || answer5 === 'y') {
     alert('I have almost always lived by the water but I actually got married at the base of Mt Tahoma(Mt Rainier) in the woods.');
@@ -108,10 +94,10 @@ function married() {
 }
 
 function numberGame() {
+  //picks a random number between 1 and 10
   let answer6 = Math.floor(Math.random() * 10) + 1;
   let guessCount = 0;
-  console.log(`Q6 answer ${answer6}`);
-
+//while loop for when they have fewer than 4 guesses and it will keep going until they get it right or run out of guesses
   while (guessCount < 4) {
     let guess6 = parseInt(prompt('I know you are getting tired of this, but I need you to guess a number between 1 and 10. You get 4 guesses to get it right.'));
     if (guess6 < answer6) {
@@ -149,7 +135,6 @@ function bakedGoods() {
 
   while (!answer7valid && q7guess > 0) {
     let answer7 = prompt('Can you guess what some of my favorite baked goods are?').toLowerCase();
-    console.log(`Q6 answer ${answer7}`);
     //This is for checking if the answer is inside the array
     //This part of the for loop checks through the array while the while loop above has a limit of 7
     for (let i = 0; i < favoriteBakedGoods.length; i++) {
@@ -183,8 +168,8 @@ function capitalizeWords(array) {
   });
 }
 
+//Function to take the username and correct number of answers and let the user know how they did
 function tally(count, userName) {
-  console.log(count);
   let questionTotal = 7;
   //Count tally
   if (count >= 4) {
@@ -200,6 +185,15 @@ function tally(count, userName) {
     alert('Well a ' + count + '/' + questionTotal + ', I\'m not even mad ' + userName + '!, I\'m impressed');
   }
 }
+
+states();
+skydive();
+published();
+codingClass();
+married();
+numberGame();
+bakedGoods();
+tally(count, userName);
 //END HERE**************************
 
 
